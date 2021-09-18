@@ -2,6 +2,7 @@ import "./Calculator.css";
 import React, { Component } from "react";
 import Button from "../components/Button";
 import Display from "../components/Display";
+import Header from "../components/Header";
 
 const initialState = {
     displayValue: '0',
@@ -77,6 +78,7 @@ export default class Calculator extends Component {
 
         return (
             <div className="calculator">
+                <Header />
                 <Display value={this.state.displayValue} />
                 <Button label="AC" click={this.clearMemory} triple />
                 <Button label="/" click={this.setOperation} operation />
